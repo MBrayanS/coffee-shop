@@ -1,0 +1,157 @@
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+
+::-webkit-scrollbar {
+    background-color: #D98841;
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb { background-color: #403124; }
+
+header, header ul {
+    display: flex;
+    align-items: center;
+}
+
+header, footer {
+    color: #D9D7CC;
+    background-color: #261E18;
+    justify-content: space-between;
+    padding: 1.2rem 6.4rem;
+}
+
+section h1 {
+    color: #fff;
+    background-color: #403124;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+}
+
+body, html { scroll-behavior: smooth; }
+
+body {
+    background-color: #D9D7CC;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+header h1 {
+    color: #D98841;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+header nav, header ul, header li { width: max-content; }
+header ul { gap: 2rem; }
+
+header a {
+    color: #D9D7CC;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    gap: 2.4rem;
+    padding: 2.4rem 6.4rem;
+}
+
+.sobre {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.sobre img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.sobre p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: justify;
+    margin-top: 1.6rem;
+}
+
+.lista-de-produtos {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2.4rem;
+}
+
+.card-produto {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.card-produto h2 {
+    background-color: #D98841;
+    color: #fff;
+    padding: .8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-produto button {
+    background-color: #261E18;
+    color: #D9D7CC;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+
+.card-produto button:hover {
+    background-color: #403124;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media screen and ( max-width: 1023px ) {
+    main { padding: 3.6rem; }
+
+    .sobre { flex-direction: column; }
+
+    .sobre img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lista-de-produtos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and ( max-width: 640px ) {
+    header {
+        flex-direction: column;
+        gap: 1.6rem;
+        padding: 1.6rem .8rem;
+        text-align: center;
+    }
+
+    main { padding: 1.2rem; }
+
+    .lista-de-produtos { grid-template-columns: repeat(1, 1fr); }
+}
